@@ -26,6 +26,10 @@ jobs:
     - name: Install dependencies
       run: flutter pub get
 
+    # यसले छुटेको एन्ड्रोइड फोल्डर र आवश्यक सबै फाइलहरू आफैं बनाइदिन्छ
+    - name: Create Android project files
+      run: flutter create . --platforms android
+
     - name: Build APK
       run: flutter build apk --release
 
